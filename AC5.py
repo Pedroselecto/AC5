@@ -15,11 +15,11 @@ def main():
         print("Rodada", rodada)
         print("Aventureiro: vida", Vida_a, "- att", att_a, "- def", def_a)
         print("Monstro: vida", Vida_m, "- att", att_m)
-        Vida_a = Vida_a - random.randint(1, att_m)
+        Vida_a = Vida_a - random.randint(1, (att_m - def_a))
         if Vida_a <= 0:
             print("Aventureiro foi derrotado!")
             break
-        Vida_m = Vida_m - random.randint(1, (att_a - def_a))
+        Vida_m = Vida_m - random.randint(1, att_a)
         if Vida_m <= 0:
             print("O monstro foi derrotado!")
             break
